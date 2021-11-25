@@ -7,9 +7,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@joist/component": "^2.0.1-next.1637773272.0",
-    "@joist/di": "^2.0.1-next.1637773272.0",
-    "@joist/di-dom": "2.0.1-next.1637773272.0"
+    "@joist/di": "^2.0.0-next.1",
+    "@joist/element": "^2.0.0-next.1"
   },
   "devDependencies": {
     "typescript": "^4.4.4",

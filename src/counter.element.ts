@@ -1,12 +1,12 @@
-import { styled } from '@joist/component/styled';
+import { styled } from '@joist/element/styled';
 import {
   observable,
   observe,
   OnChange,
   PropChanges,
-} from '@joist/component/observable';
+} from '@joist/element/observable';
 import { inject } from '@joist/di';
-import { injectable } from '@joist/di-dom';
+import { injectable } from '@joist/di/dom';
 
 import { MathService } from './math.service';
 
@@ -19,18 +19,22 @@ template.innerHTML = /*html*/ `
 
 @injectable()
 @observable()
-@styled([
-  /* css */ `
-  * {
+@styled({
+  styles: [
+    `:host {
+      display: block;
+    }
+    
+    * {
       font-size: 200%;
     }
-
+    
     span {
       width: 4rem;
       display: inline-block;
       text-align: center;
     }
-
+  
     button {
       width: 4rem;
       height: 4rem;
@@ -38,9 +42,9 @@ template.innerHTML = /*html*/ `
       border-radius: 10px;
       background-color: seagreen;
       color: white;
-    }
-  `,
-])
+    }`,
+  ],
+})
 export class CounterEement extends HTMLElement implements OnChange {
   @observe() count = 0;
 
